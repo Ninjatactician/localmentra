@@ -70,13 +70,7 @@ async function testEndpoints() {
   console.log('\n5. Testing delete note endpoint (/notes/123456):');
   try {
     const response = await fetch('http://localhost:3002/notes/123456', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        text: 'Test note for endpoint testing'
-      })
+      method: 'DELETE'
     });
     
     const data = await response.json();
